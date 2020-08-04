@@ -1,0 +1,32 @@
+.contentContainer {
+    width: 55%;
+    text-align: center;
+    margin: auto;
+}
+
+.contentContainer h1 {
+    color: white;
+    font-size: 35px;
+    margin-top: 50px;
+}
+
+.infoContainer {
+    width: 75%;
+    height: 320px;
+    background: white;
+    margin: auto;
+    border-radius: 10px;
+    margin-bottom: 25px;
+}
+
+.infoContainer p {
+    width: 90%;
+    margin: 15px;
+    color: rgb(0, 0, 0);
+    font-size: 15px;
+}
+
+.infoContainer hr {
+    width: 90%;
+    margin: auto;
+}

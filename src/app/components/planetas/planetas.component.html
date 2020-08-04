@@ -1,0 +1,21 @@
+<div class="contentContainer">
+    <h1 class="top">{{title}}</h1>
+    <br>
+    <div>
+        <div class="infoContainer" *ngFor="let planet of planets">
+            <h2>{{planet.name}}</h2>
+            <hr>        
+            <b><p>Gravity: {{planet.gravity}}</p></b>
+            <b><p>Climate: {{planet.climate}}</p></b>
+            <button (click)="showInfo(planet)" (click)="toggle()" class="btn btn-dark">Details</button>
+            <ng-container *ngIf="show">
+                <div *ngIf="planetInfo === planet">
+                    <b><p>Rotation period: {{planetInfo.rotation_period}}</p></b>
+                    <b><p>Orbital period: {{planetInfo.orbital_period}}</p></b>
+                    <b><p>Population: {{planetInfo.population}}</p></b>         
+                </div>
+            </ng-container>        
+        </div>
+    </div>
+</div>
+

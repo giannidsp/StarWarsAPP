@@ -1,0 +1,45 @@
+<div class="contentContainer">
+    <h1>{{title}}</h1>
+    <br>
+    <div class="infoContainer">
+        <div class="card">
+            <div class="card-header">
+                Add New Planet to LocalStorage
+            </div>
+            <div class="card-body">
+                <form [formGroup]="registrationForm" (ngSubmit)='onSubmit()'>
+                    <div class="form-group col-12">
+                        <label for="planetname" class="form-label">Name</label>
+                        <input type="text" class="form-control" formControlName="planetName">
+                        <span *ngIf="!planetName.valid && (planetName.touched || planetSubmitted)" 
+                        class="error-block">
+                            Please provide Name
+                        </span>
+                    </div>
+    
+                    <div class="form-group col-12">
+                        <label for="gravity" class="form-label">Gravity</label>
+                        <input type="text" class="form-control" formControlName="Gravity">
+                        <span *ngIf="!Gravity.valid && (Gravity.touched || planetSubmitted)"
+                        class="error-block">
+                            Please provide Gravity
+                        </span>
+                    </div>
+    
+                    <div class="form-group col-12">
+                        <label for="climate" class="form-label">Climate</label>
+                        <input type="text" class="form-control" formControlName="Climate">
+                        <span *ngIf="!Climate.valid && (Climate.touched || planetSubmitted)"
+                        class="error-block">
+                            Please provide Climate
+                        </span>
+                    </div>
+                    <div class="form-group col-12">
+                        <button type="submit" class="btn btn-primary mr-2">Save</button>
+                        <button type="reset" class="btn btn-secondary ml-2">Cancel</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
