@@ -2,7 +2,7 @@
     <h1 class="top">{{title}}</h1>
     <br>
     <div>
-        <div class="infoContainer" *ngFor="let planet of planets">
+        <div class="infoContainer" *ngFor="let planet of planets | paginate: {itemsPerPage: 5, currentPage: pageActual}">
             <h2>{{planet.name}}</h2>
             <hr>        
             <b><p>Gravity: {{planet.gravity}}</p></b>
@@ -17,5 +17,15 @@
             </ng-container>        
         </div>
     </div>
+    <pagination-controls (pageChange)="pageActual = $event"></pagination-controls>
+    <button 
+    [ngClass]="'no-hidden'"
+    *ngIf="showGoUpButton"
+    class="btn btn-dark"
+    (click)="onScrollTop()">
+    Go UP
+    </button>
 </div>
+
+
 

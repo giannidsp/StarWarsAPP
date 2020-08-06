@@ -12,6 +12,8 @@ import { PlanetasComponent } from './components/planetas/planetas.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { AddPlanetComponent } from './components/property/add-planet/add-planet.component';
 
+import { NgxPaginationModule } from 'ngx-pagination';
+
 
 @NgModule({
   declarations: [
@@ -28,7 +30,8 @@ import { AddPlanetComponent } from './components/property/add-planet/add-planet.
     routing,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NgxPaginationModule
   ],
   providers: [
     appRoutingProviders
